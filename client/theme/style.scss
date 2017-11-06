@@ -1,0 +1,165 @@
+body {
+    background: #e7ecef;
+    color: #272932;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+
+.main {
+    .title {
+        margin-top: 25px;
+        font-size: 35px;
+    }
+    .info {
+        margin-top: -12px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        a, a:visited {
+            color: #122369;
+        }
+        a:hover {
+            color: #ff4a81;
+        }
+    }
+    .aboutLink, .aboutLink:visited {
+        margin-top: -15px;
+        color: #122369;
+        text-decoration: underline;
+    }
+    .aboutLink:hover {
+        color: #ff4a81;
+        cursor: pointer;
+    }
+    .search {
+        font-size: 22px;
+        width: 280px;
+        padding: 6px;
+    }
+    .searchBtn {
+        font-size: 24px;
+        padding: 5px 15px;
+        margin-top: 15px;
+        border: none;
+        background: #11b5e4;
+    }
+    .searchBtn:hover {
+        cursor: pointer;
+        background: #f9c22e;
+    }
+    .loadingMsg {
+        font-size: 20px;
+        color: #ff5f3d;
+    }
+}
+
+.aboutComponent {
+    position: absolute;
+    background: rgba(250, 250, 250, 0.92);
+    border: 1px solid #11b5e4;
+    border-radius: 5px;
+    top: 55px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 450px;
+    height: 350px;
+    padding: 10px 25px;
+    z-index: 5;
+    a, a:visited {
+        color: #272932;
+    }
+    a:hover {
+        color: #ff4a81;
+    }
+    .aboutContent {
+        padding-top: 25px;
+    }
+    button {
+        font-size: 24px;
+        padding: 5px 15px;
+        margin-top: 15px;
+        border: 1px solid #11b5e4;
+        background: white;
+    }
+    button:hover {
+        cursor: pointer;
+        border: 1px solid #ff5f3d;
+    }
+    p {
+        font-size: 22px;
+    }
+}
+
+.flexWrapper {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .stocksComponent {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 250px;
+        .stock {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 45px;
+            margin: 12px auto 12px auto;
+            border: 1px solid #1d1e2c;
+            border-radius: 1px;
+            background: rgba(150, 150, 150, 0.55);
+            span {
+                margin-right: 20px;
+            }
+        }
+        .stock:hover {
+            background: #ff5f3d;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        .title {
+            margin-top: 20px;
+            font-size: 28px;
+        }
+        .currentStocksTitle {
+            font-size: 22px;
+            margin-bottom: 35px;
+        }
+    }
+    .aboutComponent {
+        top: 40px;
+        width: 80vw;
+        padding: 10px 15px;
+        z-index: 5;
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+        }
+        .flexWrapper {
+            .stocksComponent {
+                .stock {
+                    span {
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .chartWrapper {
+        width: 100vw;
+        margin-top: 20px;
+    }
+}
